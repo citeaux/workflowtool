@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:ac="http://edi.axit.pl/processor/actions">
+  <xs:import namespace="http://edi.axit.pl/processor/actions" schemaLocation="ac.xsd"/>
+  <xs:element name="deciderRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="solution-name"/>
+        <xs:element ref="flow-name"/>
+        <xs:element ref="destination"/>
+        <xs:element ref="initial"/>
+        <xs:element ref="abstract"/>
+        <xs:element ref="partial"/>
+        <xs:element ref="routing-priority"/>
+        <xs:element ref="conditions"/>
+        <xs:element ref="updates"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="solution-name" type="xs:NCName"/>
+  <xs:element name="flow-name" type="xs:NCName"/>
+  <xs:element name="destination" type="xs:string"/>
+  <xs:element name="initial" type="xs:integer"/>
+  <xs:element name="abstract" type="xs:integer"/>
+  <xs:element name="partial" type="xs:integer"/>
+  <xs:element name="routing-priority" type="xs:integer"/>
+  <xs:element name="conditions">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="not-exists"/>
+        <xs:element ref="property"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="not-exists">
+    <xs:complexType>
+      <xs:attribute name="property" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="property">
+    <xs:complexType>
+      <xs:attribute name="equals" type="xs:NCName"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="regexp"/>
+      <xs:attribute name="not-equals"/>
+      <xs:attribute name="not-regxp"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="update"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="ac:actions"/>
+      </xs:sequence>
+      <xs:attribute name="property" use="required" type="xs:NCName"/>
+      <xs:attribute name="value" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="206.0" layoutY="192.0" text="Label">
+         <contextMenu>
+            <ContextMenu fx:id="CtxMenu">
+              <items>
+                  <Menu fx:id="MenuItemLevel1" mnemonicParsing="false" text="References">
+                     <items>
+                        <Menu fx:id="MenuItemLevel1" mnemonicParsing="false" text="CodeExample">
+                          <items>
+                              <CustomMenuItem fx:id="CustomMenuItem" mnemonicParsing="false" text="Unspecified Action">
+                                 <content>
+                                    <VBox fx:id="MenuVbox" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Button fx:id="MenuButton" mnemonicParsing="false" text="Button" />
+                                          <TextArea fx:id="MenuTextArea" prefHeight="200.0" prefWidth="200.0" />
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </CustomMenuItem>
+                          </items>
+                        </Menu>
+                     </items>
+                  </Menu>
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </Label>
+   </children>
+</Pane>

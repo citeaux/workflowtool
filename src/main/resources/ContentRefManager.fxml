@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root dividerPositions="0.31782334384858046" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="921.0" prefWidth="1270.0" type="javafx.scene.control.SplitPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <items>
+      <VBox prefHeight="919.0" prefWidth="497.0">
+         <children>
+            <Label text="Content Reference Flows" />
+            <TreeView fx:id="PartnerTree" prefHeight="597.0" prefWidth="300.0" />
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="9.0" layoutY="89.0" text="Filter:" />
+                  <TextField fx:id="PartnerFilter" layoutX="14.0" layoutY="106.0" prefHeight="25.0" prefWidth="225.0" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="919.0" prefWidth="711.0">
+         <children>
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="925.0" prefWidth="801.0">
+               <right>
+                  <VBox prefHeight="722.0" prefWidth="127.0" BorderPane.alignment="CENTER" />
+               </right>
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ToolBar fx:id="toolbox" prefHeight="40.0" prefWidth="200.0">
+                          <items>
+                            <Button fx:id="NewReference" mnemonicParsing="false" onAction="#ActionNewReference" text="Add new Reference" />
+                              <Button fx:id="SaveReference" mnemonicParsing="false" onAction="#ActionSaveReference" text="Save all References" />
+                          </items>
+                        </ToolBar>
+                        <ScrollPane fx:id="ScrollPaneContent" hbarPolicy="ALWAYS" prefHeight="882.0" prefWidth="674.0" vbarPolicy="ALWAYS" />
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </items>
+</fx:root>

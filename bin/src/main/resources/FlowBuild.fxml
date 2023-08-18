@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<fx:root type="javafx.scene.layout.BorderPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Pane prefHeight="105.0" prefWidth="1118.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="SaveFlow" layoutX="7.0" layoutY="17.0" mnemonicParsing="false" onAction="#SaveFlow" text="Save Flow in DB" />
+            <ChoiceBox fx:id="Solutiontt" layoutX="380.0" layoutY="17.0" prefHeight="25.0" prefWidth="143.0" />
+            <Label layoutX="327.0" layoutY="21.0" text="Solution:" />
+            <Button fx:id="SolutionEdit" layoutX="486.0" layoutY="43.0" mnemonicParsing="false" onAction="#EditSolution" text="Edit" />
+            <Label layoutX="537.0" layoutY="21.0" text="Flowtemplate:" />
+            <ChoiceBox fx:id="Flowtemplate" layoutX="627.0" layoutY="20.0" prefWidth="150.0" />
+            <Button fx:id="FlowtemplateOpen" layoutX="656.0" layoutY="45.0" mnemonicParsing="false" onAction="#OpenFlowtemplate" text="Open" />
+            <Button fx:id="FlowtemplateNew" layoutX="702.0" layoutY="45.0" mnemonicParsing="false" onAction="#NewFlowtemplate" text="New" />
+            <Button fx:id="FlowtemplateEdit" layoutX="740.0" layoutY="45.0" mnemonicParsing="false" onAction="#EditFlowtemplate" text="Edit" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7abaf5" height="60.0" layoutY="50.0" stroke="TRANSPARENT" strokeType="INSIDE" width="201.0" />
+            <Button fx:id="SaveFlowToSystem" layoutX="7.0" layoutY="56.0" mnemonicParsing="false" onAction="#SaveFlowToSystemEvent" prefHeight="25.0" prefWidth="142.0" text="Save Flow to Filesystem" />
+            <Button fx:id="refresh" layoutX="973.0" layoutY="54.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+            <CheckBox fx:id="showWithData" layoutX="837.0" layoutY="57.0" mnemonicParsing="false" onAction="#showWithData" text="Show with Data" />
+            <ChoiceBox fx:id="System" layoutX="206.0" layoutY="17.0" prefHeight="25.0" prefWidth="110.0" />
+            <Label layoutX="156.0" layoutY="21.0" text="System:" />
+            <CheckBox fx:id="onlyOwnTemplates" layoutX="628.0" layoutY="2.0" mnemonicParsing="false" text="show only own Templates" />
+            <CheckBox fx:id="SaveRefs" layoutX="8.0" layoutY="83.0" mnemonicParsing="false" text="Save Refs" />
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.5" prefHeight="567.0" prefWidth="916.0" BorderPane.alignment="CENTER">
+         <items>
+            <ScrollPane fx:id="scpane" hbarPolicy="ALWAYS" prefHeight="500.0" prefWidth="961.0" vbarPolicy="ALWAYS">
+               <content>
+                  <Pane fx:id="mypane" prefHeight="294.0" prefWidth="310.0" />
+               </content>
+            </ScrollPane>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+              <items>
+                  <TabPane prefHeight="389.0" prefWidth="353.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab fx:id="Ger" text="General">
+                           <content>
+                              <VBox fx:id="GeneralTabVbox" prefHeight="200.0" prefWidth="100.0" />
+                           </content>
+                        </Tab>
+                        <Tab fx:id="Partners" text="Partners">
+                           <content>
+                              <GridPane>
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="10.0" prefWidth="315.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="3.0" prefWidth="22.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="79.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="168.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TableView fx:id="PartnerTabelView" prefHeight="168.0" prefWidth="244.0" GridPane.rowIndex="1">
+                                      <columns>
+                                        <TableColumn fx:id="PartnerTabelViewName" prefWidth="130.0" text="Name" />
+                                        <TableColumn fx:id="PartnerTabelViewRule" prefWidth="136.0" text="Rule" />
+                                          <TableColumn fx:id="PartnerTabelViewType" prefWidth="56.0" text="Type" />
+                                      </columns>
+                                    </TableView>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <Button fx:id="ButtonAddPartner" mnemonicParsing="false" onAction="#ButtonAddPartnerAction" prefHeight="25.0" prefWidth="103.0" text="Add Partner" />
+                                          <Button fx:id="ButtonCreateAddPartner" mnemonicParsing="false" onAction="#ButtonCreateAddPartnerAction" prefHeight="25.0" prefWidth="109.0" text="Remove Partner" />
+                                          <Button fx:id="ButtonShowPartnerCode" mnemonicParsing="false" onAction="#ButtonShowPartnerCodeAction" text="Show Source Code" wrapText="true" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </GridPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="Contentrefs" text="ContentRefs">
+                           <content>
+                              <GridPane>
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="314.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="30.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="84.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="79.0" minHeight="2.0" prefHeight="2.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="206.0" minHeight="10.0" prefHeight="206.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TableView fx:id="ComtentRefTableView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                      <columns>
+                                        <TableColumn fx:id="ComtentRefTableViewName" prefWidth="178.0" text="Name" />
+                                        <TableColumn fx:id="ComtentRefTableViewDescription" prefWidth="134.0" text="Description" />
+                                      </columns>
+                                    </TableView>
+                                    <VBox fx:id="AllTabDetailsVbox" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <Button fx:id="ButtonAddConentRef" mnemonicParsing="false" onAction="#ButtonAddConentRefAction" prefHeight="42.0" prefWidth="97.0" text="Add new Contentref" wrapText="true" />
+                                          <Button fx:id="ButtonRemoveConentRef" mnemonicParsing="false" onAction="#ButtonRemoveConentRefAction" prefHeight="42.0" prefWidth="97.0" text="Remove Contentref" wrapText="true" />
+                                          <Button fx:id="ButtonShowConentRefCode" mnemonicParsing="false" onAction="#ButtonShowConentRefCodeAction" text="Show Source Code" wrapText="true" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </GridPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <VBox fx:id="DetailsVbox" prefHeight="200.0" prefWidth="100.0" />
+              </items>
+            </SplitPane>
+         </items>
+      </SplitPane>
+   </center>
+   <left>
+      <Accordion BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" text="Ruletypes">
+               <content>
+                  <ToolBar orientation="VERTICAL" prefHeight="40.0" prefWidth="0.0" />
+               </content>
+            </TitledPane>
+          <TitledPane animated="false" text="Rule Patterns">
+               <content>
+                  <ToolBar orientation="VERTICAL" prefHeight="40.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+</fx:root>

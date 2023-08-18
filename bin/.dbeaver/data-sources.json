@@ -1,0 +1,326 @@
+{
+	"folders": {},
+	"connections": {
+		"hsqldb_embedded-17ebfdb975b-a901c20a8bba884": {
+			"provider": "generic",
+			"driver": "hsqldb_embedded",
+			"name": "data",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "C:\\Users\\russseba\\Experimental\\WFDBSQL\\hsqldb-2.6.1\\hsqldb\\data",
+				"url": "jdbc:hsqldb:file:C:\\Users\\russseba\\Experimental\\WFDBSQL\\hsqldb-2.6.1\\hsqldb\\data",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		},
+		"hsqldb_server-17f456c7ed5-723a3136f1eddfec": {
+			"provider": "generic",
+			"driver": "hsqldb_server",
+			"name": "localhost",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "9001",
+				"database": "WFDATA",
+				"url": "jdbc:hsqldb:hsql://localhost:9001/WFDATA",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {
+		"hsqldb_server-17f456c7ed5-723a3136f1eddfec": {
+			"PUBLIC": {
+				"PUBLIC": {
+					"@properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202203080939\"><entities><data-source id=\"hsqldb_server-17f456c7ed5-723a3136f1eddfec\"><entity id=\"1\" name=\"EDISOLUTIONS\" fq-name=\"PUBLIC.PUBLIC.EDISOLUTIONS\" order=\"0\" x=\"403\" y=\"540\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"2\" name=\"EDITORRULETEMPLATEFIELDS\" fq-name=\"PUBLIC.PUBLIC.EDITORRULETEMPLATEFIELDS\" order=\"1\" x=\"366\" y=\"36\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"3\" name=\"EDITORRULETEMPLATEFIELDSPROPOSITIONS\" fq-name=\"PUBLIC.PUBLIC.EDITORRULETEMPLATEFIELDSPROPOSITIONS\" order=\"2\" x=\"656\" y=\"41\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"4\" name=\"EDITORRULETEMPLATES\" fq-name=\"PUBLIC.PUBLIC.EDITORRULETEMPLATES\" order=\"3\" x=\"157\" y=\"18\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"5\" name=\"FLOWCONTENTREFTEMPLATES\" fq-name=\"PUBLIC.PUBLIC.FLOWCONTENTREFTEMPLATES\" order=\"4\" x=\"538\" y=\"271\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"6\" name=\"FLOWCOUNTERTEMPLATES\" fq-name=\"PUBLIC.PUBLIC.FLOWCOUNTERTEMPLATES\" order=\"5\" x=\"597\" y=\"446\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"7\" name=\"FLOWMAPPINGTEMPLATES\" fq-name=\"PUBLIC.PUBLIC.FLOWMAPPINGTEMPLATES\" order=\"6\" x=\"20\" y=\"219\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"8\" name=\"FLOWTEMPLATES\" fq-name=\"PUBLIC.PUBLIC.FLOWTEMPLATES\" order=\"7\" x=\"154\" y=\"396\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"9\" name=\"MYWORKFLOWCONTENTREFTEMPLATES\" fq-name=\"PUBLIC.PUBLIC.MYWORKFLOWCONTENTREFTEMPLATES\" order=\"8\" x=\"1431\" y=\"29\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"10\" name=\"MYWORKFLOWCOUNTERTEMPLATES\" fq-name=\"PUBLIC.PUBLIC.MYWORKFLOWCOUNTERTEMPLATES\" order=\"9\" x=\"1382\" y=\"521\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"11\" name=\"MYWORKFLOWMAPPINGTEMPLATES\" fq-name=\"PUBLIC.PUBLIC.MYWORKFLOWMAPPINGTEMPLATES\" order=\"10\" x=\"968\" y=\"550\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"12\" name=\"MYWORKRULETEMPLATES\" fq-name=\"PUBLIC.PUBLIC.MYWORKRULETEMPLATES\" order=\"11\" x=\"1571\" y=\"270\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"13\" name=\"MYWORKTEMPLATEFIELDS\" fq-name=\"PUBLIC.PUBLIC.MYWORKTEMPLATEFIELDS\" order=\"12\" x=\"1383\" y=\"186\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"14\" name=\"MYWORKTEMPLATEFIELDSPROPOSITION\" fq-name=\"PUBLIC.PUBLIC.MYWORKTEMPLATEFIELDSPROPOSITION\" order=\"13\" x=\"984\" y=\"133\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"15\" name=\"MYWORKTEMPLATES\" fq-name=\"PUBLIC.PUBLIC.MYWORKTEMPLATES\" order=\"14\" x=\"1102\" y=\"298\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"16\" name=\"PUBLIC_FLOWTEMPLATES\" fq-name=\"PUBLIC.PUBLIC.PUBLIC_FLOWTEMPLATES\" order=\"15\" x=\"670\" y=\"667\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"17\" name=\"RULETEMPLATES\" fq-name=\"PUBLIC.PUBLIC.RULETEMPLATES\" order=\"16\" x=\"320\" y=\"216\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"18\" name=\"TEMPLATEFIELDS\" fq-name=\"PUBLIC.PUBLIC.TEMPLATEFIELDS\" order=\"17\" x=\"-16\" y=\"458\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity><entity id=\"19\" name=\"TEMPLATEFIELDSPROPOSITION\" fq-name=\"PUBLIC.PUBLIC.TEMPLATEFIELDSPROPOSITION\" order=\"18\" x=\"173\" y=\"562\"><path name=\"PUBLIC\"/><path name=\"PUBLIC\"/></entity></data-source></entities><relations><relation name=\"vfk_EDITORRULETEMPLATEFIELDS_EDITORRULETEMPLATEFIELDSPROPOSITIONS\" type=\"vfk\" pk-ref=\"3\" fk-ref=\"2\"/><relation name=\"vfk_FLOWTEMPLATES_FLOWCONTENTREFTEMPLATES\" type=\"vfk\" pk-ref=\"5\" fk-ref=\"8\"/><relation name=\"vfk_FLOWTEMPLATES_FLOWCOUNTERTEMPLATES\" type=\"vfk\" pk-ref=\"6\" fk-ref=\"8\"/><relation name=\"vfk_FLOWTEMPLATES_FLOWMAPPINGTEMPLATES\" type=\"vfk\" pk-ref=\"7\" fk-ref=\"8\"/><relation name=\"vfk_EDISOLUTIONS_FLOWTEMPLATES\" type=\"vfk\" pk-ref=\"8\" fk-ref=\"1\"/><relation name=\"vfk_MYWORKTEMPLATES_MYWORKFLOWCONTENTREFTEMPLATES\" type=\"vfk\" pk-ref=\"9\" fk-ref=\"15\"/><relation name=\"vfk_MYWORKTEMPLATES_MYWORKFLOWCOUNTERTEMPLATES\" type=\"vfk\" pk-ref=\"10\" fk-ref=\"15\"/><relation name=\"vfk_MYWORKTEMPLATES_MYWORKFLOWMAPPINGTEMPLATES\" type=\"vfk\" pk-ref=\"11\" fk-ref=\"15\"/><relation name=\"vfk_MYWORKTEMPLATES_MYWORKRULETEMPLATES\" type=\"vfk\" pk-ref=\"12\" fk-ref=\"15\"/><relation name=\"vfk_MYWORKTEMPLATES_MYWORKTEMPLATEFIELDS\" type=\"vfk\" pk-ref=\"13\" fk-ref=\"15\"/><relation name=\"vfk_MYWORKTEMPLATES_MYWORKTEMPLATEFIELDSPROPOSITION\" type=\"vfk\" pk-ref=\"14\" fk-ref=\"15\"/><relation name=\"vfk_FLOWMAPPINGTEMPLATES_RULETEMPLATES\" type=\"vfk\" pk-ref=\"17\" fk-ref=\"7\"/><relation name=\"vfk_FLOWTEMPLATES_RULETEMPLATES\" type=\"vfk\" pk-ref=\"17\" fk-ref=\"8\"><bend type=\"abs\" x=\"320\" y=\"461\"/></relation><relation name=\"vfk_FLOWTEMPLATES_TEMPLATEFIELDS\" type=\"vfk\" pk-ref=\"18\" fk-ref=\"8\"/><relation name=\"vfk_TEMPLATEFIELDS_TEMPLATEFIELDSPROPOSITION\" type=\"vfk\" pk-ref=\"19\" fk-ref=\"18\"/></relations></diagram>"
+						}
+					},
+					":FLOWTEMPLATES": {
+						"constraints": {
+							"FLOWTEMPLATES_VK": {
+								"type": "vpk",
+								"attributes": [
+									"SOLUTIONID"
+								]
+							}
+						},
+						"foreign-keys": [
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/RULETEMPLATES",
+								"constraint": "RULETEMPLATES_VK",
+								"attributes": {
+									"ID": "FLOWID"
+								}
+							},
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/FLOWMAPPINGTEMPLATES",
+								"constraint": "FLOWMAPPINGTEMPLATES_VK",
+								"attributes": {
+									"ID": "FLOWTEMPLATEID"
+								}
+							},
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/TEMPLATEFIELDS",
+								"constraint": "TEMPLATEFIELDS_VK",
+								"attributes": {
+									"ID": "FLOWTEMPLATEID"
+								}
+							},
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/FLOWCOUNTERTEMPLATES",
+								"constraint": "FLOWCOUNTERTEMPLATES_VK",
+								"attributes": {
+									"ID": "FLOWTEMPLATEID"
+								}
+							},
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/FLOWCONTENTREFTEMPLATES",
+								"constraint": "FLOWCONTENTREFTEMPLATES_VK",
+								"attributes": {
+									"ID": "FLOWTEMPALTEID"
+								}
+							}
+						]
+					},
+					":RULETEMPLATES": {
+						"constraints": {
+							"RULETEMPLATES_VK": {
+								"type": "vpk",
+								"attributes": [
+									"FLOWID"
+								]
+							},
+							"RULETEMPLATES_VK": {
+								"type": "vpk",
+								"attributes": [
+									"MAPPINGTEMPLATEID"
+								]
+							}
+						}
+					},
+					":FLOWMAPPINGTEMPLATES": {
+						"constraints": {
+							"FLOWMAPPINGTEMPLATES_VK": {
+								"type": "vpk",
+								"attributes": [
+									"FLOWTEMPLATEID"
+								]
+							}
+						},
+						"foreign-keys": [
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/RULETEMPLATES",
+								"constraint": "RULETEMPLATES_VK",
+								"attributes": {
+									"ID": "MAPPINGTEMPLATEID"
+								}
+							}
+						]
+					},
+					":TEMPLATEFIELDS": {
+						"constraints": {
+							"TEMPLATEFIELDS_VK": {
+								"type": "vpk",
+								"attributes": [
+									"FLOWTEMPLATEID"
+								]
+							}
+						},
+						"foreign-keys": [
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/TEMPLATEFIELDSPROPOSITION",
+								"constraint": "TEMPLATEFIELDSPROPOSITION_VK",
+								"attributes": {
+									"ID": "TEMPLATEFIELDID"
+								}
+							}
+						]
+					},
+					":TEMPLATEFIELDSPROPOSITION": {
+						"constraints": {
+							"TEMPLATEFIELDSPROPOSITION_VK": {
+								"type": "vpk",
+								"attributes": [
+									"TEMPLATEFIELDID"
+								]
+							}
+						}
+					},
+					":FLOWCOUNTERTEMPLATES": {
+						"constraints": {
+							"FLOWCOUNTERTEMPLATES_VK": {
+								"type": "vpk",
+								"attributes": [
+									"FLOWTEMPLATEID"
+								]
+							}
+						}
+					},
+					":EDISOLUTIONS": {
+						"foreign-keys": [
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/FLOWTEMPLATES",
+								"constraint": "FLOWTEMPLATES_VK",
+								"attributes": {
+									"ID": "SOLUTIONID"
+								}
+							}
+						]
+					},
+					":FLOWCONTENTREFTEMPLATES": {
+						"constraints": {
+							"FLOWCONTENTREFTEMPLATES_VK": {
+								"type": "vpk",
+								"attributes": [
+									"FLOWTEMPALTEID"
+								]
+							}
+						}
+					},
+					":EDITORRULETEMPLATEFIELDS": {
+						"foreign-keys": [
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/EDITORRULETEMPLATEFIELDSPROPOSITIONS",
+								"constraint": "EDITORRULETEMPLATEFIELDSPROPOSITIONS_VK",
+								"attributes": {
+									"ID": "EDITORRULETEMPLATEFIELDID"
+								}
+							}
+						]
+					},
+					":EDITORRULETEMPLATEFIELDSPROPOSITIONS": {
+						"constraints": {
+							"EDITORRULETEMPLATEFIELDSPROPOSITIONS_VK": {
+								"type": "vpk",
+								"attributes": [
+									"EDITORRULETEMPLATEFIELDID"
+								]
+							}
+						}
+					},
+					":MYWORKTEMPLATES": {
+						"foreign-keys": [
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/MYWORKFLOWCOUNTERTEMPLATES",
+								"constraint": "MYWORKFLOWCOUNTERTEMPLATES_VK",
+								"attributes": {
+									"ID": "FLOWTEMPLATEID"
+								}
+							},
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/MYWORKFLOWMAPPINGTEMPLATES",
+								"constraint": "MYWORKFLOWMAPPINGTEMPLATES_VK",
+								"attributes": {
+									"ID": "FLOWTEMPLATEID"
+								}
+							},
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/MYWORKTEMPLATEFIELDSPROPOSITION",
+								"constraint": "MYWORKTEMPLATEFIELDSPROPOSITION_VK",
+								"attributes": {
+									"ID": "TEMPLATEFIELDID"
+								}
+							},
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/MYWORKTEMPLATEFIELDS",
+								"constraint": "MYWORKTEMPLATEFIELDS_VK",
+								"attributes": {
+									"ID": "FLOWTEMPLATEID"
+								}
+							},
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/MYWORKRULETEMPLATES",
+								"constraint": "MYWORKRULETEMPLATES_VK",
+								"attributes": {
+									"ID": "FLOWID"
+								}
+							},
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/MYWORKFLOWCONTENTREFTEMPLATES",
+								"constraint": "MYWORKFLOWCONTENTREFTEMPLATES_VK",
+								"attributes": {
+									"ID": "FLOWTEMPALTEID"
+								}
+							}
+						]
+					},
+					":MYWORKFLOWCOUNTERTEMPLATES": {
+						"constraints": {
+							"MYWORKFLOWCOUNTERTEMPLATES_VK": {
+								"type": "vpk",
+								"attributes": [
+									"FLOWTEMPLATEID"
+								]
+							}
+						}
+					},
+					":MYWORKFLOWMAPPINGTEMPLATES": {
+						"constraints": {
+							"MYWORKFLOWMAPPINGTEMPLATES_VK": {
+								"type": "vpk",
+								"attributes": [
+									"FLOWTEMPLATEID"
+								]
+							}
+						}
+					},
+					":MYWORKTEMPLATEFIELDSPROPOSITION": {
+						"constraints": {
+							"MYWORKTEMPLATEFIELDSPROPOSITION_VK": {
+								"type": "vpk",
+								"attributes": [
+									"TEMPLATEFIELDID"
+								]
+							}
+						}
+					},
+					":MYWORKTEMPLATEFIELDS": {
+						"constraints": {
+							"MYWORKTEMPLATEFIELDS_VK": {
+								"type": "vpk",
+								"attributes": [
+									"FLOWTEMPLATEID"
+								]
+							}
+						}
+					},
+					":MYWORKRULETEMPLATES": {
+						"constraints": {
+							"MYWORKRULETEMPLATES_VK": {
+								"type": "vpk",
+								"attributes": [
+									"FLOWID"
+								]
+							}
+						}
+					},
+					":MYWORKFLOWCONTENTREFTEMPLATES": {
+						"constraints": {
+							"MYWORKFLOWCONTENTREFTEMPLATES_VK": {
+								"type": "vpk",
+								"attributes": [
+									"FLOWTEMPALTEID"
+								]
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}

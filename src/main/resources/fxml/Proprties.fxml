@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="properytable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sdl.wf4java.ProprtiesController">
+  <columns>
+    <TableColumn fx:id="property" prefWidth="188.0" text="Property" />
+      <TableColumn fx:id="operator" prefWidth="120.0" text="Operator" />
+    <TableColumn fx:id="value" prefWidth="144.0" text="Value" />
+  </columns>
+</TableView>

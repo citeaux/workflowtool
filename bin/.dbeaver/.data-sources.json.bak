@@ -1,0 +1,73 @@
+{
+	"folders": {},
+	"connections": {
+		"hsqldb_embedded-17ebfdb975b-a901c20a8bba884": {
+			"provider": "generic",
+			"driver": "hsqldb_embedded",
+			"name": "data",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "C:\\Users\\russseba\\Experimental\\WFDBSQL\\hsqldb-2.6.1\\hsqldb\\data",
+				"url": "jdbc:hsqldb:file:C:\\Users\\russseba\\Experimental\\WFDBSQL\\hsqldb-2.6.1\\hsqldb\\data",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		},
+		"hsqldb_server-17f456c7ed5-723a3136f1eddfec": {
+			"provider": "generic",
+			"driver": "hsqldb_server",
+			"name": "localhost",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "9001",
+				"database": "WFDATA",
+				"url": "jdbc:hsqldb:hsql://localhost:9001/WFDATA",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {
+		"hsqldb_server-17f456c7ed5-723a3136f1eddfec": {
+			"PUBLIC": {
+				"PUBLIC": {
+					":FLOWTEMPLATES": {
+						"foreign-keys": [
+							{
+								"entity": "database://hsqldb_server-17f456c7ed5-723a3136f1eddfec/PUBLIC/PUBLIC/org.jkiss.dbeaver.ext.generic.model.GenericTable/RULETEMPLATES",
+								"constraint": "RULETEMPLATES_VK",
+								"attributes": {
+									"ID": "FLOWID"
+								}
+							}
+						]
+					},
+					":RULETEMPLATES": {
+						"constraints": {
+							"RULETEMPLATES_VK": {
+								"type": "vpk",
+								"attributes": [
+									"FLOWID"
+								]
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
